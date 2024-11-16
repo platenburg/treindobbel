@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name') }}</title>
 
+    <meta name="title" content="{{ config('app.name') }}">
+    <meta name="description" content="Dobbel en vind een treinreis vanuit elk station in Nederland.">
+    <meta name="keywords" content="trein, reizen, ns, station, dobbel, willekeurig, treinen, dobbelen, spel">
+    <meta name="author" content="{{ config('app.name') }}">
+    <meta name="language" content="{{ config('app.locale') }}">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <x-plausible-script />
