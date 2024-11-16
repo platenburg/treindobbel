@@ -16,6 +16,13 @@
         </div>
 
         <a id="dobbelButton" href="" class="block p-4 mt-8 text-white bg-blue-900 rounded-lg">Dobbel</a>
+
+        <div class="mt-8">
+            <h3 class="text-2xl font-bold">Hoe werkt {{ config('app.name') }}?</h3>
+            <p class="mt-2 text-xl">Kies je vertrekstation uit de lijst, en klik op 'Dobbel'. Er zal dan uit de volgende 15
+                treinen vanaf dat station één geselecteerd worden. Zodra je daar bent aangekomen, kan je verder vanaf dat
+                station. Zo kan je goed een dag vullen met Nederland ontdekken!</p>
+        </div>
     </div>
 @endsection
 
