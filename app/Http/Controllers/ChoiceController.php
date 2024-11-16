@@ -18,6 +18,11 @@ class ChoiceController extends Controller
             return isset($departure->routeStations) && !empty($departure->routeStations);
         });
 
+        // Eliminate departures that have ->product->categoryCode == "BUS"
+        $departures = array_filter($departures, function($departure) {
+            return $departure->product->categoryCode != "BUS";
+        });
+
         if(empty($departures)) {
             return null;
         }

@@ -11,6 +11,7 @@ Route::get('/', function () {
 
 Route::get('/dobbel', function () {
     $startStationUic = request('station');
+    if(!$startStationUic) return redirect()->route('home');
     $data = ChoiceController::chooseTrain($startStationUic);
     return view('dobbel', ['departure' => $data]);
 })->name('dobbel');

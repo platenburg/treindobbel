@@ -39,7 +39,7 @@ class NSController extends Controller
     }
 
     public function getStationFromName($stationName) {
-        $url = 'https://gateway.apiportal.ns.nl/reisinformatie-api/api/v2/stations?q=' . $stationName . "&limit=1";
+        $url = 'https://gateway.apiportal.ns.nl/reisinformatie-api/api/v2/stations?q=' . urlencode($stationName) . "&limit=1";
         $station = $this->makeNSRequest($url)->payload;
         return $station[0];
     }

@@ -26,8 +26,7 @@
     <footer>
         <div class="absolute bottom-0 w-full text-center">
             &copy; {{ date('Y') }} - {{ config('app.name') }}<br>
-            <small>{{ config('app.name') }} is niet verantwoordelijk voor onjuiste reisinformatie.<br>Reisinformatie via
-                NS.</small>
+            <small>{{ config('app.name') }} is niet verantwoordelijk voor onjuiste reisinformatie.</small>
         </div>
     </footer>
 </body>

@@ -31,14 +31,17 @@
             });
         });
 
-        stationSelect.addEventListener('change', () => {
+        const updateURL = () => {
             const station = stationSelect.value;
             let url = "{{ route('dobbel', ['station' => 'STATION']) }}";
             url = url.replace('STATION', station);
 
             const dobbelButton = document.querySelector('#dobbelButton');
             dobbelButton.href = url;
-        });
+        }
+
+        stationSelect.addEventListener('change', updateURL);
+        updateURL();
 
         // Ask for browser location
         if (navigator.geolocation) {
