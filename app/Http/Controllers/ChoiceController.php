@@ -48,7 +48,7 @@ class ChoiceController extends Controller
         $data = [
             'departureStation' => $startStationUic,
             'departureStationName' => $startStationData->namen->lang,
-            'departureTrack' => $randomDeparture->actualTrack,
+            'departureTrack' => $randomDeparture->actualTrack ?? null, // Sometimes, the actualTrack is not set yet
             'departureType' => $randomDeparture->product->shortCategoryName,
             'departureDirection' => $randomDeparture->direction,
             'departureTime' => $randomDeparture->actualDateTime,

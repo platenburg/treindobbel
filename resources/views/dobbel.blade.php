@@ -14,8 +14,10 @@
                 <b>{{ $departure['departureDirection'] }}</b>
             </h2>
 
-            <h3 class="mt-2 text-2xl">die vertrekt vanaf <b>spoor
-                    {{ $departure['departureTrack'] }}</b> om
+            <h3 class="mt-2 text-2xl">die vertrekt @if ($departure['departureTrack'])
+                    vanaf <b>spoor
+                        {{ $departure['departureTrack'] }}</b>
+                @endif om
                 <b>{{ \Carbon\Carbon::parse($departure['departureTime'])->setTimezone(config('app.timezone'))->format('H:i') }}
                     uur</b>
             </h3>
