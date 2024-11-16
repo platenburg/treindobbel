@@ -1,5 +1,12 @@
 @extends('layout')
 
+@push('meta')
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TreinDobbel">
+    <meta property="og:url" content="https://treindobbel.nl">
+    <meta property="og:description" content="Dobbel en vind een treinreis vanuit elk station in Nederland.">
+@endpush
+
 @section('content')
     <h1 class="text-5xl font-bold text-blue-900">{{ config('app.name') }}</h1>
 

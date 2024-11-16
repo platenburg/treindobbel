@@ -12,6 +12,8 @@
     <meta name="author" content="{{ config('app.name') }}">
     <meta name="language" content="{{ config('app.locale') }}">
 
+    @stack('meta')
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <x-plausible-script />

@@ -1,5 +1,16 @@
 @extends('layout')
 
+@push('meta')
+    <meta property="og:type" content="website">
+    @if ($departure !== null)
+        <meta property="og:title" content="TreinDobbel vanaf station {{ $departure['departureStation'] }}">
+    @else
+        <meta property="og:title" content="TreinDobbel">
+    @endif
+    <meta property="og:url" content="https://treindobbel.nl">
+    <meta property="og:description" content="Dobbel en vind een treinreis vanuit elk station in Nederland.">
+@endpush
+
 @section('content')
     @if ($departure !== null)
         <h2 class="text-3xl font-bold text-blue-900">Je gaat naar...</h2>
