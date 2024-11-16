@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} - Waar ga jij vandaag heen?</title>
 
     <meta name="title" content="{{ config('app.name') }}">
     <meta name="description" content="Dobbel en vind een treinreis vanuit elk station in Nederland.">
