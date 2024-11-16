@@ -45,8 +45,11 @@ class NSController extends Controller
     }
 
     public function getDeparturesByUic($uicCode) {
-        $url = 'https://gateway.apiportal.ns.nl/reisinformatie-api/api/v2/departures?uicCode=' . $uicCode . '&maxJourneys=15';
-        $departures = $this->makeNSRequest($url)->payload;
+        $departures = Cache::remember('departures_' . $uicCode, 60*5, function() use ($uicCode) {
+            $url = 'https://gateway.apiportal.ns.nl/reisinformatie-api/api/v2/departures?uicCode=' . $uicCode . '&maxJourneys=15';
+            $departures = $this->makeNSRequest($url)->payload;
+            return $departures;
+        });
         return $departures;
     }
 
